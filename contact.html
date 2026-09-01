@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ashley Moras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header-outer">
+  <div class="wrap site-header">
+    <a href="index.html" class="brand"><span class="bib">AM</span> Ashley Moras</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="journal.html">Journal</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero wrap">
+    <p class="km">Km 132 — Contact / Finish</p>
+    <h1>Contact</h1>
+    <p class="lede">Reach out directly, or use the form below.</p>
+    <p class="mono" style="margin-top:12px;"><a href="mailto:ashley.omoras@gmail.com">ashley.omoras@gmail.com</a></p>
+  </section>
+
+  <section class="section wrap">
+    <div class="grid grid-2">
+      <div>
+        <p class="km">Km 133 — Send a message</p>
+        <form class="stack" id="contact-form">
+          <div class="field">
+            <label for="ct-name">Name <span class="req">*</span></label>
+            <input type="text" id="ct-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="ct-email">Email <span class="req">*</span></label>
+            <input type="email" id="ct-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="ct-message">Message <span class="req">*</span></label>
+            <textarea id="ct-message" name="message" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn">Send message</button>
+          </div>
+          <p class="form-note">Not yet connected — Phase 3 wires this to an email/notification service.</p>
+        </form>
+      </div>
+
+      <div>
+        <p class="km">Km 134 — Work together</p>
+        <div class="card">
+          <span class="placeholder-tag">Draft copy — edit to taste via CMS</span>
+          <h3>Brand collabs, product testing &amp; consulting</h3>
+          <p class="lede">Open to brand collaborations, product testing, and consulting on training, events, or content. If that's what brought you here, mention it in the message above and Ashley will get back to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-main">
+    <div class="footer-fine">© <span id="year"></span> Ashley Moras</div>
+    <nav class="socials" aria-label="Social links">
+      <a href="https://www.instagram.com/ashley_moras/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/ashley-moras" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:ashley.omoras@gmail.com">Email</a>
+    </nav>
+  </div>
+  <div class="promo-banner">
+    <div class="promo-track">
+      <span>Fuel the ride — <a href="https://steadfastnutrition.in/" target="_blank" rel="noopener">Steadfast Nutrition</a> · code <span class="promo-code">STEADASHLEY</span> at checkout</span>
+      <span>Fuel the ride — <a href="https://steadfastnutrition.in/" target="_blank" rel="noopener">Steadfast Nutrition</a> · code <span class="promo-code">STEADASHLEY</span> at checkout</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('This form is not connected yet. It will be wired up in Phase 3.');
+  });
+</script>
+</body>
+</html>

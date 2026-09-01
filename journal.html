@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Ashley Moras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header-outer">
+  <div class="wrap site-header">
+    <a href="index.html" class="brand"><span class="bib">AM</span> Ashley Moras</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="journal.html" class="active">Journal</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero wrap">
+    <p class="km">Km 96 — Journal</p>
+    <h1>Journal</h1>
+    <p class="lede">Travel stories, the rides that went a little wrong, and a few articles. Filter by category below.</p>
+
+    <div class="filters" style="margin-top:20px;">
+      <button class="filter-btn active" data-journal-tab="travel">Travel Stories</button>
+      <button class="filter-btn" data-journal-tab="crazy">Crazy Stories</button>
+      <button class="filter-btn" data-journal-tab="articles">Articles</button>
+    </div>
+  </section>
+
+  <section class="section wrap">
+
+    <span class="placeholder-tag">Placeholder write-ups — Ashley fills these in over time via CMS, tagged by category</span>
+
+    <!-- TRAVEL STORIES -->
+    <div class="journal-panel is-active" data-journal-panel="travel" style="margin-top:16px;">
+      <div class="grid grid-3">
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Sri Lanka</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Manali</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Goa</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Singapore</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Malaysia</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Travel Story</span><h3>Delhi</h3><p class="lede">Teaser goes here.</p></article>
+      </div>
+
+      <h3 style="margin-top:36px;">Future Routes / Future Destinations</h3>
+      <ul class="wishlist">
+        <li>Wishlist entry — placeholder, add via CMS</li>
+        <li>Wishlist entry — placeholder, add via CMS</li>
+      </ul>
+    </div>
+
+    <!-- CRAZY STORIES -->
+    <div class="journal-panel" data-journal-panel="crazy" style="margin-top:16px;">
+      <div class="grid grid-3">
+        <article class="journal-card"><span class="tag">Crazy Story</span><h3>FM Manali–Doda</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Crazy Story</span><h3>Goa BRM</h3><p class="lede">Teaser goes here.</p></article>
+        <article class="journal-card"><span class="tag">Crazy Story</span><h3>Bangalore ("N'Lore") BRM</h3><p class="lede">Teaser goes here.</p></article>
+      </div>
+    </div>
+
+    <!-- ARTICLES -->
+    <div class="journal-panel" data-journal-panel="articles" style="margin-top:16px;">
+      <div class="grid grid-3">
+        <article class="journal-card"><span class="tag">Article</span><h3>Run Crew</h3><p class="lede">Existing write-up — drop the real copy in via CMS.</p></article>
+        <article class="journal-card"><span class="tag">Article</span><h3>Cycling Mods</h3><p class="lede">Existing write-up — drop the real copy in via CMS.</p></article>
+      </div>
+    </div>
+
+    <p class="form-note" style="margin-top:24px;">Built as a repeatable content type, tagged by sub-category, so filtering keeps working automatically as entries are added.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-main">
+    <div class="footer-fine">© <span id="year"></span> Ashley Moras</div>
+    <nav class="socials" aria-label="Social links">
+      <a href="https://www.instagram.com/ashley_moras/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/ashley-moras" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:ashley.omoras@gmail.com">Email</a>
+    </nav>
+  </div>
+  <div class="promo-banner">
+    <div class="promo-track">
+      <span>Fuel the ride — <a href="https://steadfastnutrition.in/" target="_blank" rel="noopener">Steadfast Nutrition</a> · code <span class="promo-code">STEADASHLEY</span> at checkout</span>
+      <span>Fuel the ride — <a href="https://steadfastnutrition.in/" target="_blank" rel="noopener">Steadfast Nutrition</a> · code <span class="promo-code">STEADASHLEY</span> at checkout</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
