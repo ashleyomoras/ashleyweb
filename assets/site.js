@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (resultsTable) {
     var yearSelect = document.querySelector('[data-filter="year"]');
     var discSelect = document.querySelector('[data-filter="discipline"]');
-    var rows = resultsTable.querySelectorAll('tbody tr');
+    var rows = resultsTable.querySelectorAll('tbody tr:not(.photo-row)');
 
     function applyResultFilters() {
       var year = yearSelect ? yearSelect.value : 'all';
@@ -26,13 +26,38 @@ document.addEventListener('DOMContentLoaded', function () {
       rows.forEach(function (row) {
         var matchesYear = year === 'all' || row.dataset.year === year;
         var matchesDisc = disc === 'all' || row.dataset.discipline === disc;
-        row.style.display = (matchesYear && matchesDisc) ? '' : 'none';
+        var show = matchesYear && matchesDisc;
+        row.style.display = show ? '' : 'none';
+
+        var photoRow = row.nextElementSibling;
+        if (photoRow && photoRow.classList.contains('photo-row')) {
+          if (!show) {
+            photoRow.style.display = 'none';
+            photoRow.classList.remove('is-open');
+            var btn = row.querySelector('[data-photo-toggle]');
+            if (btn) { btn.textContent = '+ Photos'; btn.setAttribute('aria-expanded', 'false'); }
+          } else {
+            photoRow.style.display = '';
+          }
+        }
       });
     }
 
     if (yearSelect) yearSelect.addEventListener('change', applyResultFilters);
     if (discSelect) discSelect.addEventListener('change', applyResultFilters);
   }
+
+  /* ---------------- Achievements per-row photo toggle ---------------- */
+  document.querySelectorAll('[data-photo-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var row = btn.closest('tr').nextElementSibling;
+      if (row && row.classList.contains('photo-row')) {
+        var open = row.classList.toggle('is-open');
+        btn.textContent = open ? '– Photos' : '+ Photos';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+    });
+  });
 
   /* ---------------- Podcast click-to-play ---------------- */
   document.querySelectorAll('[data-video-id]').forEach(function (thumb) {
