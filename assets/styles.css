@@ -484,6 +484,87 @@ form.stack { display: grid; gap: 16px; max-width: 480px; }
   gap: 10px;
 }
 
+.photo-slot {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--line);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: var(--steel-tint);
+  margin: -20px -20px 0 -20px;
+  width: calc(100% + 40px);
+}
+
+.journal-card img.photo-fill {
+  aspect-ratio: 4 / 3;
+  width: calc(100% + 40px);
+  margin: -20px -20px 0 -20px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Photo chip row — reusable "1 required + up to 3 optional" image slot   */
+/* used on Achievements, Testimonials, Sponsors, and Journal entries      */
+/* ---------------------------------------------------------------------- */
+
+.photo-chip-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-chip {
+  width: 56px;
+  aspect-ratio: 1 / 1;
+  border: 1px dashed var(--line);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  color: var(--ink-dim);
+  text-align: center;
+  line-height: 1.15;
+  background: var(--steel-tint);
+  flex-shrink: 0;
+}
+
+.photo-chip-optional { opacity: .65; }
+
+.photo-note {
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin-top: 8px;
+}
+
+/* Achievements — expandable per-row photo panel */
+
+.photo-toggle {
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--steel);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.photo-toggle:hover { background: var(--steel-tint); }
+
+tr.photo-row { display: none; }
+tr.photo-row.is-open { display: table-row; }
+tr.photo-row td { padding: 14px 8px; background: var(--panel); }
+
 .journal-card .tag {
   font-family: var(--font-mono);
   font-size: .64rem;
