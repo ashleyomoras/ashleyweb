@@ -74,29 +74,30 @@
             <th>Event</th>
             <th>Discipline</th>
             <th>Result</th>
+            <th>Photos</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="win" data-year="2026" data-discipline="road">
-            <td>Mar 2026</td><td>Regional GP</td><td>Road</td><td>1st</td>
-          </tr>
-          <tr data-year="2026" data-discipline="itt">
-            <td>Apr 2026</td><td>National ITT</td><td>ITT</td><td>3rd</td>
-          </tr>
-          <tr data-year="2026" data-discipline="brevet">
-            <td>May 2026</td><td>Sample Brevet 200</td><td>Brevet / Endurance</td><td>Finisher</td>
-          </tr>
-          <tr class="win" data-year="2025" data-discipline="road">
-            <td>Sep 2025</td><td>Circuit Race</td><td>Road</td><td>2nd</td>
-          </tr>
-          <tr data-year="2025" data-discipline="itt">
-            <td>Nov 2025</td><td>State ITT</td><td>ITT</td><td>5th</td>
-          </tr>
+          <tr class="win" data-year="2026" data-discipline="road"><td>Mar 2026</td><td>Regional GP</td><td>Road</td><td>1st</td>
+          <td><button class="photo-toggle" type="button" data-photo-toggle aria-expanded="false">+ Photos</button></td></tr>
+          <tr class="photo-row"><td colspan="5"><div class="photo-chip-row"><div class="photo-chip">Photo 1</div><div class="photo-chip photo-chip-optional">Photo 2<br>optional</div><div class="photo-chip photo-chip-optional">Photo 3<br>optional</div><div class="photo-chip photo-chip-optional">Photo 4<br>optional</div></div></td></tr>
+          <tr data-year="2026" data-discipline="itt"><td>Apr 2026</td><td>National ITT</td><td>ITT</td><td>3rd</td>
+          <td><button class="photo-toggle" type="button" data-photo-toggle aria-expanded="false">+ Photos</button></td></tr>
+          <tr class="photo-row"><td colspan="5"><div class="photo-chip-row"><div class="photo-chip">Photo 1</div><div class="photo-chip photo-chip-optional">Photo 2<br>optional</div><div class="photo-chip photo-chip-optional">Photo 3<br>optional</div><div class="photo-chip photo-chip-optional">Photo 4<br>optional</div></div></td></tr>
+          <tr data-year="2026" data-discipline="brevet"><td>May 2026</td><td>Sample Brevet 200</td><td>Brevet / Endurance</td><td>Finisher</td>
+          <td><button class="photo-toggle" type="button" data-photo-toggle aria-expanded="false">+ Photos</button></td></tr>
+          <tr class="photo-row"><td colspan="5"><div class="photo-chip-row"><div class="photo-chip">Photo 1</div><div class="photo-chip photo-chip-optional">Photo 2<br>optional</div><div class="photo-chip photo-chip-optional">Photo 3<br>optional</div><div class="photo-chip photo-chip-optional">Photo 4<br>optional</div></div></td></tr>
+          <tr class="win" data-year="2025" data-discipline="road"><td>Sep 2025</td><td>Circuit Race</td><td>Road</td><td>2nd</td>
+          <td><button class="photo-toggle" type="button" data-photo-toggle aria-expanded="false">+ Photos</button></td></tr>
+          <tr class="photo-row"><td colspan="5"><div class="photo-chip-row"><div class="photo-chip">Photo 1</div><div class="photo-chip photo-chip-optional">Photo 2<br>optional</div><div class="photo-chip photo-chip-optional">Photo 3<br>optional</div><div class="photo-chip photo-chip-optional">Photo 4<br>optional</div></div></td></tr>
+          <tr data-year="2025" data-discipline="itt"><td>Nov 2025</td><td>State ITT</td><td>ITT</td><td>5th</td>
+          <td><button class="photo-toggle" type="button" data-photo-toggle aria-expanded="false">+ Photos</button></td></tr>
+          <tr class="photo-row"><td colspan="5"><div class="photo-chip-row"><div class="photo-chip">Photo 1</div><div class="photo-chip photo-chip-optional">Photo 2<br>optional</div><div class="photo-chip photo-chip-optional">Photo 3<br>optional</div><div class="photo-chip photo-chip-optional">Photo 4<br>optional</div></div></td></tr>
         </tbody>
       </table>
     </div>
 
-    <p class="form-note" style="margin-top:20px;">Structure supports adding photos/videos per achievement over time — wired in Phase 3.</p>
+    <p class="form-note" style="margin-top:20px;">Each result supports 1–4 photos (first required, rest optional) — click "+ Photos" on a row to see the slots. Wired to real uploads via CMS in Phase 3.</p>
   </section>
 
 </main>
